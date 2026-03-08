@@ -15,7 +15,7 @@ export const NoteProvider =({children})=>{
     },[]);
 
     useEffect (()=>{
-        // const noteString= JSON.stringify(list);
+       
         localStorage.setItem('notes',JSON.stringify(list))
     },[list])
     const addNote=(text)=>{

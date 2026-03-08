@@ -21,7 +21,7 @@ export default function Dashboard(){
     }
     return(
         <div style={{backgroundColor:'gray', padding:'30px'}} >
-            <input  style={{ padding:'6px'}} type="text" value={note} placeholder="Enter your note" onChange={(e)=>setNote(e.target.value)} /> <br /> <br />
+            <input ref={inputRef} style={{ padding:'6px'}} type="text" value={note} placeholder="Enter your note" onChange={(e)=>setNote(e.target.value)} /> <br /> <br />
             <button style={{border:'1px solid black',padding:'5px'}} onClick={handleSubmit} >Add Note</button>
             <p style={{color:'blue'}}>
                 Total Note Count: {totalNotes}
