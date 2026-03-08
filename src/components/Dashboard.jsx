@@ -20,11 +20,11 @@ export default function Dashboard(){
         inputRef.current?.focus()
     }
     return(
-        <div>
-            <input type="text" value={note} placeholder="Enter your note" onChange={(e)=>setNote(e.target.value)} />
-            <button onClick={handleSubmit} >Add Note</button>
-            <p>
-                ToTal Note Count:{totalNotes}
+        <div style={{backgroundColor:'gray', padding:'30px'}} >
+            <input  style={{ padding:'6px'}} type="text" value={note} placeholder="Enter your note" onChange={(e)=>setNote(e.target.value)} /> <br /> <br />
+            <button style={{border:'1px solid black',padding:'5px'}} onClick={handleSubmit} >Add Note</button>
+            <p style={{color:'blue'}}>
+                Total Note Count: {totalNotes}
             </p>
         </div>
     )
