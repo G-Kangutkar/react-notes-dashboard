@@ -7,11 +7,17 @@ export const NoteProvider =({children})=>{
     const [list,setList]= useState([]);
 
     useEffect(()=>{
+       
         const stored= localStorage.getItem('notes');
         if(stored){
             setList(JSON.parse(stored))
         }
-    },[])
+    },[]);
+
+    useEffect (()=>{
+        // const noteString= JSON.stringify(list);
+        localStorage.setItem('notes',JSON.stringify(list))
+    },[list])
     const addNote=(text)=>{
         if(text.trim()){
             const newNote={
